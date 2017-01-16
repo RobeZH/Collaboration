@@ -24,15 +24,15 @@
 	</style>
 </head>
 	
-<body>
+<body onload="initShow()">
 <!-- nav Bar -->
     <!-- do not change nav order; top is now over side -->
 	<!-- sidenav -->
 	<nav class="w3-sidenav w3-light-grey w3-card-4 w3-animate-left" style="width:200px">
 		<p class="w3-padding .t_md w3-black" >  </p>
 		<header class="w3-container w3-dark-grey"><h5>我们的队伍</h5></header>
-		<a id = "member" class="tablink w3-padding w3-green" href="#member" onclick = "changeCLR(event)">成员</a>
-		<a id = "makeup" class="tablink w3-padding" href="#team" onclick = "changeCLR(event)">组成</a>
+		<a id = "memberTab" class="tablink w3-padding w3-green" href="#member" onclick = "changeCLR('memberTab','tablink')">成员</a>
+		<a id = "teamTab" class="tablink w3-padding" href="#team" onclick = "changeCLR('teamTab','tablink')">组成</a>
 	</nav>
 	<!-- topnav -->
 	<div class="w3-top">
@@ -118,7 +118,7 @@
 			</div>
 		</div>
 		
-		<div id="team" >
+		<div id="team">
 			<div class="w3-row w3-light-grey w3-padding-64">
 				<div class="w3-col w3-container m2">
 				</div>
@@ -233,46 +233,51 @@
 </body>
 
 <script>
-	function changeCLR(evt) {
+	var flag = false; // solve ["click without scroll" double changes tablink's color results in error]
+	function changeCLR(divName,obj) {
+		if(obj == 'tablink') flag = true;
 		var i, tablinks;
 		tablinks = document.getElementsByClassName("tablink");
 		for (i = 0; i < tablinks.length; i++) {
 			tablinks[i].className = tablinks[i].className.replace(" w3-green", "");
 		}
-		evt.currentTarget.className += " w3-green";
+		document.getElementById(divName).className += " w3-green";
 	}
 	
-	window.onscroll = function(){ //绑定scroll事件
-    var t = document.documentElement.scrollTop || document.body.scrollTop;  //获取滚动距离
-	var a = document.getElementById("member");
-	var b = document.getElementById("makeup");
-	if(t > 2041) {
-		if(a.className.indexOf("w3-green") > 0) {
-			console.log(t+"需要显示b");
-			var i, tablinks;
-			tablinks = document.getElementsByClassName("tablink");
-			for (i = 0; i < tablinks.length; i++) {
-				tablinks[i].className = tablinks[i].className.replace(" w3-green", "");
+	function initShow() {
+		var sHref = window.location.href;
+		var args  = sHref.split("#");
+		//这里是不是要测试一下？
+		if(args[1] != "member" && args[1] != null && args[1]!="")
+			changeCLR(args[1]+'Tab','tablink');
+	}
+	
+	window.onscroll = function(){ // see distance between scroll & top to change tablinks color
+//		test();
+		if(flag) {
+			flag = false;
+			return;
+		}
+		var t = document.documentElement.scrollTop || document.body.scrollTop;  //获取滚动距离
+		//这个要是标签多了不是得枚举写死？
+		var a = document.getElementById("memberTab");
+		var b = document.getElementById("teamTab");
+		if(t > 2041) {
+			if(a.className.indexOf("w3-green") > 0 && flag == false) {
+				changeCLR(b.id);
 			}
-			b.className += " w3-green";
-			console.log("a: "+a.className);
-			console.log("b: "+b.className);
+		}
+		else {
+			if(b.className.indexOf("w3-green") > 0 && flag == false) {
+				changeCLR(a.id);
+			}
 		}
 	}
-	else {
-		if(b.className.indexOf("w3-green") > 0) {
-			console.log(t+"需要显示a");
-			var i, tablinks;
-			tablinks = document.getElementsByClassName("tablink");
-			for (i = 0; i < tablinks.length; i++) {
-				tablinks[i].className = tablinks[i].className.replace(" w3-green", "");
-			}
-			a.className += " w3-green";
-			console.log("a: "+a.className);
-			console.log("b: "+b.className);
-		}
+
+	function test() {
+		var t = document.documentElement.scrollTop || document.body.scrollTop;
+		console.log(t);
 	}
-}
 </script>
 
 </html>
