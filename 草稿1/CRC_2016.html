@@ -41,27 +41,27 @@
 		<ul class="w3-navbar w3-black">
 			<li class = "w3-left"><img src = "logo/z_logo.jpg"></li>
 			<li><span class = "w3-hover-none w3-hover-text-none mynavfont t_md">Zodiac</span></li>
-			<li><a href="index.html" class = "mynavfont w3-text-grey  w3-hover-text-white">首页</a></li>
+			<li><a href="index.html" class = "mynavfont w3-text-white  w3-hover-text-white">首页</a></li>
             <li class = "w3-dropdown-hover">
 				<a href="team.html" class = "mynavfont w3-text-grey  w3-hover-text-white">队伍</a>
 				<div class="w3-dropdown-content w3-white w3-card-4">
-					<a href="#" class = "mynavfont">成员</a>
-					<a href="#" class = "mynavfont">组成</a>
+					<a href="team.html#member" class = "mynavfont">成员</a>
+					<a href="team.html#team" class = "mynavfont">组成</a>
 				</div>
 			</li>
 			<li class = "w3-dropdown-hover">
 				<a href="us.html" class = "mynavfont w3-text-grey  w3-hover-text-white">我们</a>
 				<div class="w3-dropdown-content w3-white w3-card-4">
-					<a href="#" class = "mynavfont">学校</a>
-					<a href="#" class = "mynavfont">人员</a>
-					<a href="#" class = "mynavfont">导师</a>
+					<a href="us.html?tag=school" class = "mynavfont">学校</a>
+					<a href="us.html?tag=member" class = "mynavfont">人员</a>
+					<a href="us.html?tag=teacher" class = "mynavfont">导师</a>
 				</div>
 			</li>
 			<li class = "w3-dropdown-hover">
-				<a href="#" class = "mynavfont w3-text-white  w3-hover-text-white">比赛</a>
+				<a href="#" class = "mynavfont w3-text-grey  w3-hover-text-white">比赛</a>
                 <div class="w3-dropdown-content w3-white w3-card-4">
 					<a href="about_FRC.html" class = "mynavfont">关于FRC</a>
-                    <a href="CRC_2016.html" class = "mynavfont">CRC2016</a>
+                    <a href="#" class = "mynavfont">CRC2016</a>
                     <a href="FRC_2017.html" class = "mynavfont">FRC2017</a>
 				</div>
 			</li>
@@ -262,7 +262,6 @@
 			tablinks[i].className = tablinks[i].className.replace(" w3-green", "");
 		}
 		document.getElementById(divName).style.display = "block";
-		console.log(divName + "display: " + document.getElementById(divName).style.display);
 		evt.currentTarget.className += " w3-green";
 	}
 </script>

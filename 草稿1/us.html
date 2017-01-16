@@ -24,36 +24,36 @@
 	</style>
 </head>
 	
-<body>
+<body onload="initShow()">
 <!-- nav Bar -->
     <!-- do not change nav order; top is now over side -->
 	<!-- sidenav -->
 	<nav class="w3-sidenav w3-light-grey w3-card-4 w3-animate-left" style="width:200px">
 		<p class="w3-padding .t_md w3-black" >  </p>
 		<header class="w3-container w3-dark-grey"><h5>我们</h5></header>
-		<a id = "a" class="tablink w3-padding w3-green" href="#" onclick = "openDiv(event, 'before_cpt')">学校</a>
-		<a class="tablink w3-padding" href="#" onclick = "openDiv(event, 'at_cpt')">人员</a>
-		<a class="tablink w3-padding" href="#" onclick = "openDiv(event, 'after_cpt')">导师</a>
+		<a id="pschool" class="tablink w3-padding w3-green" href="#" onclick = "openDiv(event, 'school')">学校</a>
+		<a id="pmember" class="tablink w3-padding" href="#" onclick = "openDiv(event, 'member')">人员</a>
+		<a id="pteacher" class="tablink w3-padding" href="#" onclick = "openDiv(event, 'teacher')">导师</a>
 	</nav>
 	<!-- topnav -->
 	<div class="w3-top">
 		<ul class="w3-navbar w3-black">
 			<li class = "w3-left"><img src = "logo/z_logo.jpg"></li>
 			<li><span class = "w3-hover-none w3-hover-text-none mynavfont t_md">Zodiac</span></li>
-			<li><a href="index.html" class = "mynavfont w3-text-grey  w3-hover-text-white">首页</a></li>
+			<li><a href="index.html" class = "mynavfont w3-text-white  w3-hover-text-white">首页</a></li>
             <li class = "w3-dropdown-hover">
 				<a href="team.html" class = "mynavfont w3-text-grey  w3-hover-text-white">队伍</a>
 				<div class="w3-dropdown-content w3-white w3-card-4">
-					<a href="#" class = "mynavfont">成员</a>
-					<a href="#" class = "mynavfont">组成</a>
+					<a href="team.html#member" class = "mynavfont">成员</a>
+					<a href="team.html#team" class = "mynavfont">组成</a>
 				</div>
 			</li>
 			<li class = "w3-dropdown-hover">
-				<a href="us.html" class = "mynavfont w3-text-white  w3-hover-text-white">我们</a>
+				<a href="#" class = "mynavfont w3-text-grey  w3-hover-text-white">我们</a>
 				<div class="w3-dropdown-content w3-white w3-card-4">
-					<a href="#" class = "mynavfont">学校</a>
-					<a href="#" class = "mynavfont">人员</a>
-					<a href="#" class = "mynavfont">导师</a>
+					<a href="us.html?tag=school" class = "mynavfont">学校</a>
+					<a href="us.html?tag=member" class = "mynavfont">人员</a>
+					<a href="us.html?tag=teacher" class = "mynavfont">导师</a>
 				</div>
 			</li>
 			<li class = "w3-dropdown-hover">
@@ -74,7 +74,7 @@
 
 	
 	<!-- content -->
-	<div id="before_cpt" class="divTag" style="margin-left:200px;transition:0.4s; display:yes;" >
+	<div id="school" class="divTag" style="margin-left:200px;transition:0.4s; display:yes;" >
 		<br>
 		<div class="w3-row w3-white w3-padding-64">
 			<div class="w3-col w3-container m2">
@@ -122,7 +122,7 @@
 		</div>
 	</div>
 		
-	<div id="at_cpt" class="divTag" style="margin-left:200px;transition:0.4s; display:none;" >
+	<div id="member" class="divTag" style="margin-left:200px;transition:0.4s; display:none;" >
 		<div class="w3-row w3-white w3-padding-64">
 			<div class="w3-col w3-container m2">
 			</div>
@@ -199,7 +199,7 @@
 		</div>
 	</div>
 	
-	<div id="after_cpt" class="divTag" style="margin-left:200px;transition:0.4s; display:none;" >
+	<div id="teacher" class="divTag" style="margin-left:200px;transition:0.4s; display:none;" >
 		<div class="w3-row w3-white w3-padding-64">
 			<div class="w3-col w3-container m2">
 			</div>
@@ -293,9 +293,40 @@
 			tablinks[i].className = tablinks[i].className.replace(" w3-green", "");
 		}
 		document.getElementById(divName).style.display = "block";
-		console.log(divName + "display: " + document.getElementById(divName).style.display);
 		evt.currentTarget.className += " w3-green";
 	}
+	
+//var request = { 
+//	QueryString : function(val) { 
+//		var uri = window.location.search; 
+//		var re = new RegExp("" +val+ "\=([^\&\?]*)", "ig"); 
+//		return ((uri.match(re))?(uri.match(re)[0].substr(val.length+1)):null); 
+//	}, 
+
+
+function GetQueryString(name) {
+     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+     var r = window.location.search.substr(1).match(reg);
+     if(r!=null)return  unescape(r[2]); return null;
+}
+
+function initShow(){
+	var divName = GetQueryString("tag");
+	if(divName != null && divName != "") {
+		x = document.getElementsByClassName("divTag");
+		for (i = 0; i < x.length; i++) {
+			x[i].style.display = "none";
+		}
+		document.getElementById(divName).style.display = "block";
+		tablinks = document.getElementsByClassName("tablink");
+		for (i = 0; i < tablinks.length; i++) {
+			tablinks[i].className = tablinks[i].className.replace(" w3-green", "");
+		}
+		document.getElementById('p'+divName).className += " w3-green";
+	}
+
+}
+	
 </script>
 
 </html>

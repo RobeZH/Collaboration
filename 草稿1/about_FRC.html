@@ -26,42 +26,31 @@
 	
 <body>
 <!-- nav Bar -->
-    <!-- do not change nav order; top is now over side -->
-	<!-- sidenav -->
-	<nav class="w3-sidenav w3-light-grey w3-card-4 w3-animate-left" style="width:200px">
-		<p class="w3-padding .t_md w3-black" >  </p>
-		<header class="w3-container w3-dark-grey"><h5>关于FRC</h5></header>
-		<a class="w3-padding" href="#">关于FRC</a>
-		<a id = "a" class="tablink w3-padding w3-green" href="#" onclick = "openDiv(event, 'before_cpt')">赛前准备</a>
-		<a class="tablink w3-padding" href="#" onclick = "openDiv(event, 'at_cpt')">比赛实况</a>
-		<a class="tablink w3-padding" href="#" onclick = "openDiv(event, 'after_cpt')">赛后感想</a>
-	</nav>
-	
-        
+    <!-- topnav-->
 	<div class="w3-top">
 		<ul class="w3-navbar w3-black">
 			<li class = "w3-left"><img src = "logo/z_logo.jpg"></li>
 			<li><span class = "w3-hover-none w3-hover-text-none mynavfont t_md">Zodiac</span></li>
-			<li><a href="index.html" class = "mynavfont w3-text-grey  w3-hover-text-white">首页</a></li>
+			<li><a href="index.html" class = "mynavfont w3-text-white  w3-hover-text-white">首页</a></li>
             <li class = "w3-dropdown-hover">
 				<a href="team.html" class = "mynavfont w3-text-grey  w3-hover-text-white">队伍</a>
 				<div class="w3-dropdown-content w3-white w3-card-4">
-					<a href="#" class = "mynavfont">成员</a>
-					<a href="#" class = "mynavfont">组成</a>
+					<a href="team.html#member" class = "mynavfont">成员</a>
+					<a href="team.html#team" class = "mynavfont">组成</a>
 				</div>
 			</li>
 			<li class = "w3-dropdown-hover">
 				<a href="us.html" class = "mynavfont w3-text-grey  w3-hover-text-white">我们</a>
 				<div class="w3-dropdown-content w3-white w3-card-4">
-					<a href="#" class = "mynavfont">学校</a>
-					<a href="#" class = "mynavfont">人员</a>
-					<a href="#" class = "mynavfont">导师</a>
+					<a href="us.html?tag=school" class = "mynavfont">学校</a>
+					<a href="us.html?tag=member" class = "mynavfont">人员</a>
+					<a href="us.html?tag=teacher" class = "mynavfont">导师</a>
 				</div>
 			</li>
 			<li class = "w3-dropdown-hover">
-				<a href="#" class = "mynavfont w3-text-white  w3-hover-text-white">比赛</a>
+				<a href="#" class = "mynavfont w3-text-grey  w3-hover-text-white">比赛</a>
                 <div class="w3-dropdown-content w3-white w3-card-4">
-					<a href="about_FRC.html" class = "mynavfont">关于FRC</a>
+					<a href="#" class = "mynavfont">关于FRC</a>
                     <a href="CRC_2016.html" class = "mynavfont">CRC2016</a>
                     <a href="FRC_2017.html" class = "mynavfont">FRC2017</a>
 				</div>
@@ -264,7 +253,6 @@
 			tablinks[i].className = tablinks[i].className.replace(" w3-green", "");
 		}
 		document.getElementById(divName).style.display = "block";
-		console.log(divName + "display: " + document.getElementById(divName).style.display);
 		evt.currentTarget.className += " w3-green";
 	}
 </script>
