@@ -31,20 +31,24 @@
 	<nav class="w3-sidenav w3-light-grey w3-card-4 w3-animate-left" style="width:200px">
 		<p class="w3-padding .t_md w3-black" >  </p>
 		<header class="w3-container w3-dark-grey"><h5>我们的队伍</h5></header>
-		<a id = "memberTab" class="tablink w3-padding w3-green" href="#member" onclick = "changeCLR('memberTab','tablink')">成员</a>
-		<a id = "teamTab" class="tablink w3-padding" href="#team" onclick = "changeCLR('teamTab','tablink')">组成</a>
+		<a id = "stgTab" class="tablink w3-padding w3-green" href="#stg" onclick = "changeCLR('stgTab','tablink')">战略部</a>
+		<a id = "mcnTab" class="tablink w3-padding" href="#mcn" onclick = "changeCLR('mcnTab','tablink')">机械组</a>
+		<a id = "prgmTab" class="tablink w3-padding" href="#prgm" onclick = "changeCLR('prgmTab','tablink')">编程组</a>
+		<a id = "busnTab" class="tablink w3-padding" href="#busn" onclick = "changeCLR('busnTab','tablink')">商务组</a>
 	</nav>
 	<!-- topnav -->
 	<div class="w3-top">
 		<ul class="w3-navbar w3-black">
 			<li class = "w3-left"><img src = "logo/z_logo.jpg"></li>
 			<li><span class = "w3-hover-none w3-hover-text-none mynavfont t_md">Zodiac</span></li>
-			<li><a href="index.html" class = "mynavfont w3-text-white  w3-hover-text-white">首页</a></li>
+			<li><a href="index.html" class = "mynavfont w3-text-grey  w3-hover-text-white">首页</a></li>
             <li class = "w3-dropdown-hover">
-				<a href="#" class = "mynavfont w3-text-grey  w3-hover-text-white">队伍</a>
+				<a href="#" class = "mynavfont w3-text-white  w3-hover-text-white">队伍</a>
 				<div class="w3-dropdown-content w3-white w3-card-4">
-					<a href="team.html#member" class = "mynavfont">成员</a>
-					<a href="team.html#team" class = "mynavfont">组成</a>
+					<a href="team.html#stg" class = "mynavfont">战略部</a>
+					<a href="team.html#mcn" class = "mynavfont">机械组</a>
+					<a href="team.html#prgm" class = "mynavfont">编程组</a>
+					<a href="team.html#busn" class = "mynavfont">商务组</a>
 				</div>
 			</li>
 			<li class = "w3-dropdown-hover">
@@ -59,7 +63,6 @@
 				<a href="#" class = "mynavfont w3-text-grey  w3-hover-text-white">比赛</a>
                 <div class="w3-dropdown-content w3-white w3-card-4">
 					<a href="about_FRC.html" class = "mynavfont">关于FRC</a>
-                    <a href="CRC_2016.html" class = "mynavfont">CRC2016</a>
                     <a href="FRC_2017.html" class = "mynavfont">FRC2017</a>
 				</div>
 			</li>
@@ -68,47 +71,16 @@
 		</ul>
 	</div>
 <!-- Page content -->
-
-
-
-	
 	<!-- content -->
 	<div class="divTag" style="margin-left:200px;transition:0.4s; display:yes;" >
-		<div id="member">
-			<br>
+		<div id = "stg" class = "division">
 			<div class="w3-row w3-white w3-padding-64">
 				<div class="w3-col w3-container m2">
 				</div>
 				<div class="w3-col w3-container m4">
 					<br>
-					<span class="w3-wide t_lg">我们的成员</span>
-					<p class="w3-opacity t_sm"><i>队伍简介</i></p>
-				</div>
-				<div class="w3-col w3-container m3">
-					<img src="image/section-1.png" style="width:80%">
-				</div>
-				<div class="w3-col w3-container m3">
-				</div>
-			</div>
-			<div class="w3-row w3-light-grey w3-padding-64">
-				<div class="w3-col w3-container m3">
-				</div>
-				<div class="w3-col w3-container m3">
-					<img src="image/section-2.png" style="width:80%">
-				</div>
-				<div class="w3-col w3-container m4">
-					<br>
-					<p class="w3-opacity t_sm"><i>​   华师大二附中 FRC 机器人队伍 Zodiac 虽然成立时间不久，但已经吸纳了学校广大师生的参与 ，成为了学校的热点。我队为了提高队伍的知名程度，提高学生对于机器人运动的了解以及兴 趣，不仅印刷了海报以及在全校散发传单，还通过学校的社团机制进行招新、队伍活动，以此 来募求全校感兴趣的学生的加入。我们的宗旨是为对机器人、机器人运动以及 FRC 拥有兴趣以 及热情的学生搭建一个交流学习的平台以及走向世界的视窗。我们非常欢迎所有同学的加入。 </i></p>
-				</div>
-				<div class="w3-col w3-container m2">
-				</div>
-			</div>
-			<div class="w3-row w3-white w3-padding-64">
-				<div class="w3-col w3-container m2">
-				</div>
-				<div class="w3-col w3-container m4">
-					<br>
-					<p class="w3-opacity t_sm"><i>目前我队实际人数已达 40 人以上，而社团也一举跃为了较大型社团之一。大部分社员精通运用 编程软件。而与此同时，我队也正努力使自身从一个学生团体向一支社会力量转变。目前通过 队伍中的队员及其亲友的努力，我队在微信等公共平台上已经拥有了一定规模的影响力。我们 希望能够以这些平台为依托向大众普及机器人的知识，在社区里推动机器人教育事业以及 STEM 教育的发展，并且激起更多的市民、学生及儿童拥有对于 STEM 、机器人运动的兴趣与 热情，培养机器人文化的发展，从而用这种方式回报社会。 </i></p>
+					<span class="w3-wide t_lg">CAD组</span>
+					<p class="w3-opacity t_sm"><i>名单 </i></p>
 				</div>
 				<div class="w3-col w3-container m3">
 					<img src="image/section-3.png" style="width:80%">
@@ -117,52 +89,7 @@
 				</div>
 			</div>
 		</div>
-		
-		<div id="team">
-			<div class="w3-row w3-light-grey w3-padding-64">
-				<div class="w3-col w3-container m2">
-				</div>
-				<div class="w3-col w3-container m4">
-					<br>
-					<span class="w3-wide t_lg">队伍组成</span>
-					<p class="w3-opacity t_sm"><i>哈哈哈哈哈哈哈</i></p>
-				</div>
-				<div class="w3-col w3-container m3">
-					<img src="image/consist.png" style="width:80%">
-				</div>
-				<div class="w3-col w3-container m3">
-				</div>
-			</div>
-			<div class="w3-row w3-white w3-padding-64">
-				<div class="w3-col w3-container m3">
-				</div>
-				<div class="w3-col w3-container m3">
-					<img src="image/section-2.png" style="width:80%">
-				</div>
-				<div class="w3-col w3-container m4">
-					<br>
-					<span class="w3-wide t_lg">C机电组</span>
-					<p class="w3-opacity t_sm"><i>CAD 组专门负责设计机器人结构方案，以及需要加工的精密零件的虚拟实体设计，简而言之就 是建模。 
-	鉴于 FRC 机器人复杂的结构，以及 FRC 大赛题目的创新性，制作机器人的关键第一步就是利 用 3D 建模软件，将头脑中创新的设计展示出来。我们使用 PTC​ Ⓡ​ Creo​ Ⓡ​ 和 Autodesk​ Ⓡ Inventor​ Ⓡ​ 进行 CAD 设计。通过与 PTC 公司的工程师进行交流学习，我们的建模能力得到了很 大提升。今后，我们将继续努力，争取为队伍提供最好的技术支持。 
-	 </i></p>
-				</div>
-				<div class="w3-col w3-container m2">
-				</div>
-			</div>
-			<div class="w3-row w3-light-grey w3-padding-64">
-				<div class="w3-col w3-container m2">
-				</div>
-				<div class="w3-col w3-container m4">
-					<br>
-					<span class="w3-wide t_lg">狂拽酷帅叼炸天的编程组</span>
-					<p class="w3-opacity t_sm"><i>编程组主要负责编写机器人控制程序、视觉分析程序。除此之外，编程组还负责数据分析、网 页设计、文章排版等工作。Zodiac 编程组成员均拥有两年以上编程经验，其中一位经验丰富的 成员在三年级时就已经开始参加算法竞赛。我们使用 Node.js 自动抓取数据，分析每一个 FRC 赛区的历年情况，给队伍选择赛区上的建议。我们使用 Java 编写机器人程序，同时采用创新的 控制方法，提高了机器人比赛时的机动性。我们使用 Python 语言和 OpenCV 视觉分析库编写视 觉分析程序。与此同时，我们创新地使用网页作为视觉分析数据反馈的前端，在界面和效率上 都十分领先。 </i></p>
-				</div>
-				<div class="w3-col w3-container m3">
-					<img src="image/section-3.png" style="width:80%">
-				</div>
-				<div class="w3-col w3-container m3">
-				</div>
-			</div>
+		<div id = "mcn" class = "division">
 			<div class="w3-row w3-light-grey w3-padding-64">
 				<div class="w3-col w3-container m3">
 				</div>
@@ -172,29 +99,16 @@
 				<div class="w3-col w3-container m4">
 					<br>
 					<span class="w3-wide t_lg">机电组</span>
-					<p class="w3-opacity t_sm"><i>机电组负责搭建机器人的机械机构以及连接控制电路。利用多种多样的工具，常见的材料来搭 建出符合竞赛要求的机器人。 
-	机电组成员动手能力强，所有人精通电工、气动套件的使用，可以熟练运用各类工具。在实际 搭建中，巧妙运用有限的工具如扎带、魔术贴、榔头、角磨机等，解决遇到的各类难题。至于 六角扳手和套筒是所有人使用得最熟练的工具。机电组熟悉各种电机及气缸的参数以及特点， 能灵活运用变速箱等设备让机器人完成各种任务。  
-	 </i></p>
+
+					<p class="w3-opacity t_sm"><i>名单</i></p>
+					<p class="w3-opacity t_sm"><i> </i></p>
 				</div>
 				<div class="w3-col w3-container m2">
 				</div>
 			</div>
+		</div>
+		<div id = "prgm" class = "division">
 			<div class="w3-row w3-white w3-padding-64">
-				<div class="w3-col w3-container m2">
-				</div>
-				<div class="w3-col w3-container m4">
-					<br>
-					<span class="w3-wide t_lg">商务组</span>
-					<p class="w3-opacity t_sm"><i>商务组主要负责募集资金并撰写商业企划书。 
-	我组成员擅长渉交，辩论，拥有良好的口才以及文书写作能力。我们通过邮箱、电话、会 谈等多元化方式与一些科技类或对此感兴趣的公司或个人进行沟通交流，并获得赞助，从 而成为队伍坚实有力的经济支柱。  </i></p>
-				</div>
-				<div class="w3-col w3-container m3">
-					<img src="image/section-3.png" style="width:80%">
-				</div>
-				<div class="w3-col w3-container m3">
-				</div>
-			</div>
-			<div class="w3-row w3-light-grey w3-padding-64">
 				<div class="w3-col w3-container m3">
 				</div>
 				<div class="w3-col w3-container m3">
@@ -202,17 +116,33 @@
 				</div>
 				<div class="w3-col w3-container m4">
 					<br>
-					<span class="w3-wide t_lg">宣传组</span>
-					<p class="w3-opacity t_sm"><i>宣传组通过制作宣传视频、宣传手册等方式，向各方面人士宣传介绍我们的队伍。组内成 员熟练掌握摄影、摄像、后期制作等各项宣传技能。我们记录过程性资料，制作宣传视频 ，将各相关视频资料整合，供大家更生动具体地了解队伍的基本信息、队员以及队伍实时 进度。我们线上利用微信公众号，线下通过发放宣传手册，以及其他方式让更多人了解到 Zodiac。宣传组将 Zodiac 队伍和队伍的合作伙伴的信息分享到世界各地，让越来越多的人 了解 Zodiac。   
-	 </i></p>
+					<span class="w3-wide t_lg">狂拽酷帅叼炸天的编程组</span>
+
+					<p class="w3-opacity t_sm"><i>名单</i></p>
+					<p class="w3-opacity t_sm"><i> </i></p>
 				</div>
 				<div class="w3-col w3-container m2">
 				</div>
 			</div>
 		</div>
+		<div id = "busn" class = "division">
+			<div class="w3-row w3-light-grey w3-padding-64">
+				<div class="w3-col w3-container m2">
+				</div>
+				<div class="w3-col w3-container m4">
+					<br>
+					<span class="w3-wide t_lg">商务与宣传组</span>
+					<p class="w3-opacity t_sm"><i>名单 </i></p>
+				</div>
+				<div class="w3-col w3-container m3">
+					<img src="image/section-3.png" style="width:80%">
+				</div>
+				<div class="w3-col w3-container m3">
+				</div>
+			</div>
+		</div>
 	</div>
 		
-
 <!-- Contact Information -->
 	<div class="w3-black">
 		<div class="w3-container w3-content w3-padding-64" style="max-width:800px">
@@ -244,6 +174,7 @@
 		document.getElementById(divName).className += " w3-green";
 	}
 	
+	
 	function initShow() {
 		var sHref = window.location.href;
 		var args  = sHref.split("#");
@@ -252,31 +183,24 @@
 			changeCLR(args[1]+'Tab','tablink');
 	}
 	
-	window.onscroll = function(){ // see distance between scroll & top to change tablinks color
-//		test();
+	window.onscroll = function() {
 		if(flag) {
 			flag = false;
 			return;
 		}
-		var t = document.documentElement.scrollTop || document.body.scrollTop;  //获取滚动距离
-		//这个要是标签多了不是得枚举写死？
-		var a = document.getElementById("memberTab");
-		var b = document.getElementById("teamTab");
-		if(t > 2041) {
-			if(a.className.indexOf("w3-green") > 0 && flag == false) {
-				changeCLR(b.id);
-			}
+		var i, x;
+		x = document.getElementsByClassName("division");
+		var divs = new Array(x.length)
+		for(i = 0; i < x.length; i++) {
+			divs[i] = x[i].offsetTop;
 		}
-		else {
-			if(b.className.indexOf("w3-green") > 0 && flag == false) {
-				changeCLR(a.id);
-			}
-		}
-	}
-
-	function test() {
 		var t = document.documentElement.scrollTop || document.body.scrollTop;
-		console.log(t);
+		for(i = divs.length - 1; i >= 0 ; i--) {
+			if(t > divs[i]) {
+				changeCLR(x[i].id+'Tab','scroll');
+				break;
+			}
+		}
 	}
 </script>
 
