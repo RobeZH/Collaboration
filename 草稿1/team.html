@@ -24,42 +24,35 @@
 	</style>
 </head>
 	
-<body>
+<body onload="initShow()">
 <!-- nav Bar -->
     <!-- do not change nav order; top is now over side -->
 	<!-- sidenav -->
 	<nav class="w3-sidenav w3-light-grey w3-card-4 w3-animate-left" style="width:200px">
 		<p class="w3-padding .t_md w3-black" >  </p>
-<<<<<<< HEAD
 		<header class="w3-container w3-dark-grey"><h5>我们的队伍</h5></header>
-		<a id = "a" class="tablink w3-padding w3-green" href="#" onclick = "openDiv(event, 'before_cpt')">成员</a>
-		<a class="tablink w3-padding" href="#" onclick = "openDiv(event, 'at_cpt')">组成</a>
-=======
-		<header class="w3-container w3-dark-grey"><h5>FRC 2017</h5></header>
-		<a id = "a" class="tablink w3-padding w3-green" href="#member" onclick = "changeCLR(event)">成员</a>
-		<a class="tablink w3-padding" href="#team" onclick = "changeCLR(event)">组成</a>
->>>>>>> origin/master
-
+		<a id = "memberTab" class="tablink w3-padding w3-green" href="#member" onclick = "changeCLR('memberTab','tablink')">成员</a>
+		<a id = "teamTab" class="tablink w3-padding" href="#team" onclick = "changeCLR('teamTab','tablink')">组成</a>
 	</nav>
 	<!-- topnav -->
 	<div class="w3-top">
 		<ul class="w3-navbar w3-black">
 			<li class = "w3-left"><img src = "logo/z_logo.jpg"></li>
 			<li><span class = "w3-hover-none w3-hover-text-none mynavfont t_md">Zodiac</span></li>
-			<li><a href="index.html" class = "mynavfont w3-text-grey  w3-hover-text-white">首页</a></li>
+			<li><a href="index.html" class = "mynavfont w3-text-white  w3-hover-text-white">首页</a></li>
             <li class = "w3-dropdown-hover">
-				<a href="team.html" class = "mynavfont w3-text-white  w3-hover-text-white">队伍</a>
+				<a href="#" class = "mynavfont w3-text-grey  w3-hover-text-white">队伍</a>
 				<div class="w3-dropdown-content w3-white w3-card-4">
-					<a href="#" class = "mynavfont">成员</a>
-					<a href="#" class = "mynavfont">组成</a>
+					<a href="team.html#member" class = "mynavfont">成员</a>
+					<a href="team.html#team" class = "mynavfont">组成</a>
 				</div>
 			</li>
 			<li class = "w3-dropdown-hover">
 				<a href="us.html" class = "mynavfont w3-text-grey  w3-hover-text-white">我们</a>
 				<div class="w3-dropdown-content w3-white w3-card-4">
-					<a href="#" class = "mynavfont">学校</a>
-					<a href="#" class = "mynavfont">人员</a>
-					<a href="#" class = "mynavfont">导师</a>
+					<a href="us.html?tag=school" class = "mynavfont">学校</a>
+					<a href="us.html?tag=member" class = "mynavfont">人员</a>
+					<a href="us.html?tag=teacher" class = "mynavfont">导师</a>
 				</div>
 			</li>
 			<li class = "w3-dropdown-hover">
@@ -125,8 +118,8 @@
 			</div>
 		</div>
 		
-		<div id="team" >
-			<div class="w3-row w3-white w3-padding-64">
+		<div id="team">
+			<div class="w3-row w3-light-grey w3-padding-64">
 				<div class="w3-col w3-container m2">
 				</div>
 				<div class="w3-col w3-container m4">
@@ -140,7 +133,7 @@
 				<div class="w3-col w3-container m3">
 				</div>
 			</div>
-			<div class="w3-row w3-light-grey w3-padding-64">
+			<div class="w3-row w3-white w3-padding-64">
 				<div class="w3-col w3-container m3">
 				</div>
 				<div class="w3-col w3-container m3">
@@ -156,7 +149,7 @@
 				<div class="w3-col w3-container m2">
 				</div>
 			</div>
-			<div class="w3-row w3-white w3-padding-64">
+			<div class="w3-row w3-light-grey w3-padding-64">
 				<div class="w3-col w3-container m2">
 				</div>
 				<div class="w3-col w3-container m4">
@@ -240,13 +233,50 @@
 </body>
 
 <script>
-	function changeCLR(evt) {
+	var flag = false; // solve ["click without scroll" double changes tablink's color results in error]
+	function changeCLR(divName,obj) {
+		if(obj == 'tablink') flag = true;
 		var i, tablinks;
 		tablinks = document.getElementsByClassName("tablink");
 		for (i = 0; i < tablinks.length; i++) {
 			tablinks[i].className = tablinks[i].className.replace(" w3-green", "");
 		}
-		evt.currentTarget.className += " w3-green";
+		document.getElementById(divName).className += " w3-green";
+	}
+	
+	function initShow() {
+		var sHref = window.location.href;
+		var args  = sHref.split("#");
+		//这里是不是要测试一下？
+		if(args[1] != "member" && args[1] != null && args[1]!="")
+			changeCLR(args[1]+'Tab','tablink');
+	}
+	
+	window.onscroll = function(){ // see distance between scroll & top to change tablinks color
+//		test();
+		if(flag) {
+			flag = false;
+			return;
+		}
+		var t = document.documentElement.scrollTop || document.body.scrollTop;  //获取滚动距离
+		//这个要是标签多了不是得枚举写死？
+		var a = document.getElementById("memberTab");
+		var b = document.getElementById("teamTab");
+		if(t > 2041) {
+			if(a.className.indexOf("w3-green") > 0 && flag == false) {
+				changeCLR(b.id);
+			}
+		}
+		else {
+			if(b.className.indexOf("w3-green") > 0 && flag == false) {
+				changeCLR(a.id);
+			}
+		}
+	}
+
+	function test() {
+		var t = document.documentElement.scrollTop || document.body.scrollTop;
+		console.log(t);
 	}
 </script>
 

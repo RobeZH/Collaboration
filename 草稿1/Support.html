@@ -33,16 +33,16 @@
             <li class = "w3-dropdown-hover">
 				<a href="team.html" class = "mynavfont w3-text-grey  w3-hover-text-white">队伍</a>
 				<div class="w3-dropdown-content w3-white w3-card-4">
-					<a href="#" class = "mynavfont">成员</a>
-					<a href="#" class = "mynavfont">组成</a>
+					<a href="team.html#member" class = "mynavfont">成员</a>
+					<a href="team.html#team" class = "mynavfont">组成</a>
 				</div>
 			</li>
 			<li class = "w3-dropdown-hover">
 				<a href="us.html" class = "mynavfont w3-text-grey  w3-hover-text-white">我们</a>
 				<div class="w3-dropdown-content w3-white w3-card-4">
-					<a href="#" class = "mynavfont">学校</a>
-					<a href="#" class = "mynavfont">人员</a>
-					<a href="#" class = "mynavfont">导师</a>
+					<a href="us.html?tag=school" class = "mynavfont">学校</a>
+					<a href="us.html?tag=member" class = "mynavfont">人员</a>
+					<a href="us.html?tag=teacher" class = "mynavfont">导师</a>
 				</div>
 			</li>
 			<li class = "w3-dropdown-hover">
@@ -53,14 +53,11 @@
                     <a href="FRC_2017.html" class = "mynavfont">FRC2017</a>
 				</div>
 			</li>
-			<li><a href="Support.html" class = "mynavfont w3-text-white  w3-hover-text-white">支持</a></li>
+			<li><a href="#" class = "mynavfont w3-text-white  w3-hover-text-white">支持</a></li>
 			<li class = "w3-right"><a href="#" class = "mynavfont">English</a></li>
 		</ul>
 	</div>
 <!-- Page content -->
-
-
-	
 	<!-- content -->
 	<div id="before_cpt" class="divTag" style="margin-left:0px;transition:0.4s; display:yes;" >
 		<br>
@@ -139,7 +136,6 @@
 			tablinks[i].className = tablinks[i].className.replace(" w3-green", "");
 		}
 		document.getElementById(divName).style.display = "block";
-		console.log(divName + "display: " + document.getElementById(divName).style.display);
 		evt.currentTarget.className += " w3-green";
 	}
 </script>
