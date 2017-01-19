@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<link rel="stylesheet" href="css/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+	<style>
+		.mynavfont {
+			font-family: "Comic Sans MS", cursive, sans-serif;
+			font-size: 20px;
+			font-weight: bold;
+			
+		}
+		.t_lg {
+			font-size: 48px;
+			font-family: 'Tangerine', serif;
+		}
+		.t_md {
+			font-size: 30px;
+		}
+		.t_sm {
+			font-size: 24px;
+		}
+	</style>
+</head>
+	
+<body onload="initShow()">
+<!-- nav Bar -->
+    <!-- do not change nav order; top is now over side -->
+	<!-- sidenav -->
+	<nav class="w3-sidenav w3-light-grey w3-card-4 w3-animate-left" style="width:200px">
+		<p class="w3-padding .t_md w3-black" >  </p>
+		<header class="w3-container w3-dark-grey"><h5>我们</h5></header>
+		<a id="pschool" class="tablink w3-padding w3-green" href="#" onclick = "openDiv(event, 'school')">学校</a>
+		<a id="pmember" class="tablink w3-padding" href="#" onclick = "openDiv(event, 'member')">人员</a>
+		<a id="pteacher" class="tablink w3-padding" href="#" onclick = "openDiv(event, 'teacher')">导师</a>
+	</nav>
+	<!-- topnav -->
+	<div class="w3-top">
+		<ul class="w3-navbar w3-black">
+			<li class = "w3-left"><img src = "logo/z_logo.jpg"></li>
+			<li><span class = "w3-hover-none w3-hover-text-none mynavfont t_md">Zodiac</span></li>
+			<li><a href="index.html" class = "mynavfont w3-text-grey  w3-hover-text-white">首页</a></li>
+            <li class = "w3-dropdown-hover">
+				<a href="team.html" class = "mynavfont w3-text-grey  w3-hover-text-white">队伍</a>
+				<div class="w3-dropdown-content w3-white w3-card-4">
+					<a href="team.html#stg" class = "mynavfont">战略部</a>
+					<a href="team.html#mcn" class = "mynavfont">机械组</a>
+					<a href="team.html#prgm" class = "mynavfont">编程组</a>
+					<a href="team.html#busn" class = "mynavfont">商务组</a>
+				</div>
+			</li>
+			<li class = "w3-dropdown-hover">
+				<a href="#" class = "mynavfont w3-text-white  w3-hover-text-white">我们</a>
+				<div class="w3-dropdown-content w3-white w3-card-4">
+					<a href="us.html?tag=school" class = "mynavfont">学校</a>
+					<a href="us.html?tag=member" class = "mynavfont">人员</a>
+					<a href="us.html?tag=teacher" class = "mynavfont">导师</a>
+				</div>
+			</li>
+			<li class = "w3-dropdown-hover">
+				<a href="#" class = "mynavfont w3-text-grey  w3-hover-text-white">比赛</a>
+                <div class="w3-dropdown-content w3-white w3-card-4">
+					<a href="http://www.firstinspires.org/robotics/frc" target="_blank" class = "mynavfont">关于FRC</a>
+                    <a href="FRC_2017.html" class = "mynavfont">FRC2017</a>
+				</div>
+			</li>
+			<li><a href="Support.html" class = "mynavfont w3-text-grey  w3-hover-text-white">支持</a></li>
+			<li class = "w3-right"><a href="#" class = "mynavfont">English</a></li>
+		</ul>
+	</div>
+<!-- Page content -->
+
+
+
+	
+	<!-- content -->
+	<div id="school" class="divTag" style="margin-left:200px;transition:0.4s; display:yes;" >
+		<br>
+		<div class="w3-row w3-white w3-padding-64">
+			<div class="w3-col w3-container m2">
+			</div>
+			<div class="w3-col w3-container m4">
+				<br>
+				<span class="w3-wide t_lg">所属学校</span>
+				<span class="w3-wide t_md">——</span>
+                <br>
+                <span class="w3-wide t_lg">华师大二附中</span>
+
+				<p class="w3-opacity t_sm"><i></i></p>
+			</div>
+			<div class="w3-col w3-container m3">
+				<img src="image/school-logo.png" style="width:150%">
+			</div>
+			<div class="w3-col w3-container m3">
+			</div>
+		</div>
+		<div class="w3-row w3-light-grey w3-padding-64">
+			<div class="w3-col w3-container m3">
+			</div>
+			<div class="w3-col w3-container m3">
+				<img src="image/section-2.png" style="width:80%">
+			</div>
+			<div class="w3-col w3-container m4">
+				<br>
+				<p class="w3-opacity t_sm"><i>​ 华东师范大学第二附属中学创建于 1958 年， 1978 年被确定为上海唯一一所教育部直属重点 中学，学校排名稳居上海市前二，是 “2049” 创新人才培养基地、上海市科技特色示范学校、 联合国教科文组织“亚洲教育革新为发展服务计划联系中心”（ APEID ）成员单位。</i></p>
+			</div>
+			<div class="w3-col w3-container m2">
+			</div>
+		</div>
+		<div class="w3-row w3-white w3-padding-64">
+			<div class="w3-col w3-container m2">
+			</div>
+			<div class="w3-col w3-container m4">
+				<br>
+				<p class="w3-opacity t_sm"><i>建校近 60 年来，逐渐形成了 “追求卓越、崇尚创新” 的校园文化精神，并长期坚持 “以质量立校， 以科研兴校，以改革创新发展学校” 的办学理念，始终走在中国基础教育的改革前列。学校重 视国际教育，与美、英、日、法等国的十余所中学建立友好的合作交流关系。学校每年高中毕 业生大学录取率为95%以上，被北清复交等名校录取的学生超过该校毕业生数 60%。截至 2014 年据中国科协统计，二附中在国际中学生学科奥林匹克竞赛中总共获 23 枚金牌，4枚银牌和 1 枚铜牌，金牌总数名列全国前茅；二附中学生连续参加国际中学生科学与工程大赛，共荣获 10 多个奖项位居全国第一。 </i></p>
+			</div>
+			<div class="w3-col w3-container m3">
+				<img src="image/section-3.png" style="width:80%">
+			</div>
+			<div class="w3-col w3-container m3">
+			</div>
+		</div>
+	</div>
+		
+	<div id="member" class="divTag" style="margin-left:200px;transition:0.4s; display:none;" >
+		<div class="w3-row w3-white w3-padding-64">
+			<div class="w3-col w3-container m2">
+			</div>
+			<div class="w3-col w3-container m4">
+				<br>
+				<span class="w3-wide t_lg">人员组成</span>
+				<p class="w3-opacity t_sm"><i>哈哈哈哈哈哈哈</i></p>
+			</div>
+			<div class="w3-col w3-container m3">
+				<img src="image/050844r4ibgb4ggi51558l.jpg" width="1366" height="180" style="width:80%">
+			</div>
+			<div class="w3-col w3-container m3">
+			</div>
+		</div>
+		<div class="w3-row w3-light-grey w3-padding-64">
+			<div class="w3-col w3-container m3">
+			</div>
+			<div class="w3-col w3-container m3">
+				<img src="image/section-2.png" style="width:80%">
+			</div>
+			<div class="w3-col w3-container m4">
+				<br>
+                <span class="w3-wide t_lg">狂拽酷帅叼炸天的编程组</span>
+
+				<p class="w3-opacity t_sm"><i>名单</i></p>
+				<p class="w3-opacity t_sm"><i> </i></p>
+			</div>
+			<div class="w3-col w3-container m2">
+			</div>
+		</div>
+		<div class="w3-row w3-white w3-padding-64">
+			<div class="w3-col w3-container m2">
+			</div>
+			<div class="w3-col w3-container m4">
+				<br>
+				<span class="w3-wide t_lg">CAD组</span>
+				<p class="w3-opacity t_sm"><i>名单 </i></p>
+			</div>
+			<div class="w3-col w3-container m3">
+				<img src="image/section-3.png" style="width:80%">
+			</div>
+			<div class="w3-col w3-container m3">
+			</div>
+		</div>
+        <div class="w3-row w3-light-grey w3-padding-64">
+			<div class="w3-col w3-container m3">
+			</div>
+			<div class="w3-col w3-container m3">
+				<img src="image/section-2.png" style="width:80%">
+			</div>
+			<div class="w3-col w3-container m4">
+				<br>
+                <span class="w3-wide t_lg">机电组</span>
+
+				<p class="w3-opacity t_sm"><i>名单</i></p>
+				<p class="w3-opacity t_sm"><i> </i></p>
+			</div>
+			<div class="w3-col w3-container m2">
+			</div>
+		</div>
+        <div class="w3-row w3-white w3-padding-64">
+			<div class="w3-col w3-container m2">
+			</div>
+			<div class="w3-col w3-container m4">
+				<br>
+				<span class="w3-wide t_lg">商务与宣传组</span>
+				<p class="w3-opacity t_sm"><i>名单 </i></p>
+			</div>
+			<div class="w3-col w3-container m3">
+				<img src="image/section-3.png" style="width:80%">
+			</div>
+			<div class="w3-col w3-container m3">
+			</div>
+		</div>
+	</div>
+	
+	<div id="teacher" class="divTag" style="margin-left:200px;transition:0.4s; display:none;" >
+		<div class="w3-row w3-white w3-padding-64">
+			<div class="w3-col w3-container m2">
+			</div>
+			<div class="w3-col w3-container m4">
+				<br>
+				<span class="w3-wide t_lg">我们</span>
+				<span class="w3-wide t_md">的</span>
+				<span class="w3-wide t_lg">导师！</span>
+				<p class="w3-opacity t_sm"><i>哈哈哈哈哈哈哈</i></p>
+			</div>
+			<div class="w3-col w3-container m3">
+				<img src="image/section-1.png" style="width:80%">
+			</div>
+			<div class="w3-col w3-container m3">
+			</div>
+		</div>
+		<div class="w3-row w3-light-grey w3-padding-64">
+			<div class="w3-col w3-container m3">
+			</div>
+			<div class="w3-col w3-container m3">
+				<img src="image/cxd.jpg" style="width:80%">
+			</div>
+			<div class="w3-col w3-container m4">
+				<br>
+				<span class="w3-wide t_lg">陈向东</span>
+				<p class="w3-opacity t_sm"><i>陈向东​ ，2013 年毕业于华东师范大学获理学硕士学位，华东师范大学第二附属中学劳技信息教 研组教师，学校科技辅导团队及大学先修课程团队成员，FRC机器人社团和赛智社团指导老 师。积极探索创客教育和 STEM 教学模式在中学综合学科中的运用，促进技术和工程素养与课 程融合。开发有《信息素养》、《计算机辅助设计》、《计算机网络技术》、《电路基础》、 《Autodesk Inventor 入门》等多门拓展课程，多次辅导学生在上海市青少年科技创新大赛、上海 市劳动技术学科竞赛等科技类、实践类比赛中获奖。 </i></p>
+			</div>
+			<div class="w3-col w3-container m2">
+			</div>
+		</div>
+		<div class="w3-row w3-white w3-padding-64">
+			<div class="w3-col w3-container m2">
+			</div>
+			<div class="w3-col w3-container m4">
+				<br>
+				<span class="w3-wide t_lg">祖权</span>
+				<p class="w3-opacity t_sm"><i>陈向东​ ，2013 年毕业于华东师范大学获理学硕士学位，华东师范大学第二附属中学劳技信息教 研组教师，学校科技辅导团队及大学先修课程团队成员，FRC机器人社团和赛智社团指导老 师。积极探索创客教育和 STEM 教学模式在中学综合学科中的运用，促进技术和工程素养与课 程融合。开发有《信息素养》、《计算机辅助设计》、《计算机网络技术》、《电路基础》、 《Autodesk Inventor 入门》等多门拓展课程，多次辅导学生在上海市青少年科技创新大赛、上海 市劳动技术学科竞赛等科技类、实践类比赛中获奖。 </i></p>
+			</div>
+			<div class="w3-col w3-container m3">
+				<img src="image/zq.jpg" style="width:80%">
+			</div>
+			<div class="w3-col w3-container m3">
+			</div>
+		</div>
+        <div class="w3-row w3-light-grey w3-padding-64">
+			<div class="w3-col w3-container m3">
+			</div>
+			<div class="w3-col w3-container m3">
+				<img src="image/jj.jpg" style="width:80%">
+			</div>
+			<div class="w3-col w3-container m4">
+				<br>
+				<span class="w3-wide t_lg">金（zhang）靖（zhe）</span>
+				<p class="w3-opacity t_sm"><i>金靖​ ，信息学教师。大学主修物理、辅修计算机科学学位，并具备多项IT专业资格认证，曾独 立开发多个信息管理系统。自2011年起，担任理科班、实验班的信息常规教学、科技创新指 导、大学先修课程和信息学奥赛辅导工作。任教以来，学生累计获奖NOIP一等奖43人，入选上 海队14人，NOI银牌2人、铜牌5人，APIO银牌1人、铜牌5人。2014年获得中国计算机学会颁发 的“NOI优秀教师奖”。 </i></p>
+			</div>
+			<div class="w3-col w3-container m2">
+			</div>
+		</div>
+
+	</div>
+		
+
+<!-- Contact Information -->
+	<div class="w3-black">
+		<div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+			<h2 class="w3-wide w3-center">联系 · 我们</h2>
+			<div class="w3-row">
+				<div class="w3-col w3-container m4">
+				</div>
+				<div class="w3-col w3-container m8">
+					<br>
+					<p class="w3-opacity"><i>Email：hsefz@hsefz.cn</i></p><br>
+					<p class="w3-opacity"><i>Tel：4008-123-123</i></p><br>
+					<p class="w3-opacity"><i>Address：晨晖路555号 / 祖冲之路736号</i></p><br>
+					<p class="w3-opacity"><i>Tel time available：每周一至周五9a.m.~5p.m.</i></p><br>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+<script>
+	function openDiv(evt, divName) {
+		var i, x, tablinks;
+		x = document.getElementsByClassName("divTag");
+		for (i = 0; i < x.length; i++) {
+			x[i].style.display = "none";
+		}
+		tablinks = document.getElementsByClassName("tablink");
+		for (i = 0; i < tablinks.length; i++) {
+			tablinks[i].className = tablinks[i].className.replace(" w3-green", "");
+		}
+		document.getElementById(divName).style.display = "block";
+		evt.currentTarget.className += " w3-green";
+	}
+	
+//var request = { 
+//	QueryString : function(val) { 
+//		var uri = window.location.search; 
+//		var re = new RegExp("" +val+ "\=([^\&\?]*)", "ig"); 
+//		return ((uri.match(re))?(uri.match(re)[0].substr(val.length+1)):null); 
+//	}, 
+
+
+function GetQueryString(name) {
+     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+     var r = window.location.search.substr(1).match(reg);
+     if(r!=null)return  unescape(r[2]); return null;
+}
+
+function initShow(){
+	var divName = GetQueryString("tag");
+	if(divName != null && divName != "") {
+		x = document.getElementsByClassName("divTag");
+		for (i = 0; i < x.length; i++) {
+			x[i].style.display = "none";
+		}
+		document.getElementById(divName).style.display = "block";
+		tablinks = document.getElementsByClassName("tablink");
+		for (i = 0; i < tablinks.length; i++) {
+			tablinks[i].className = tablinks[i].className.replace(" w3-green", "");
+		}
+		document.getElementById('p'+divName).className += " w3-green";
+	}
+
+}
+	
+</script>
+
+</html>

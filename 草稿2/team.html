@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta http-equiv="" content="utf-8">
+    <link rel="stylesheet" href="css/jquery.sectionmenu.css" />
+	<link rel="stylesheet" href="css/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+	
+	<script type="text/javascript" src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="js/scrollify.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+
+	<style>
+		.mynavfont {
+			font-family: "Comic Sans MS", cursive, sans-serif;
+			font-size: 20px;
+			font-weight: bold;
+			
+		}
+		.t_lg {
+			font-size: 48px;
+			font-family: 'Tangerine', serif;
+		}
+		.t_md {
+			font-size: 30px;
+		}
+		.t_sm {
+			font-size: 24px;
+		}
+		.tablink .curr{ background: #F0AD4E; color: #fff;}
+	</style>
+</head>
+<body>
+	<!-- sidenav
+		<nav class="w3-sidenav w3-animate-left" style="background-color:rgba(50,20,20,0.1); width:10%">
+			<p class="w3-padding .t_md w3-black" >  </p>
+			<header class="w3-container"><h5 class = " mynavfont">我们的队伍</h5></header>
+			<a id = "stgTab" class="tablink w3-padding mynavfont curr" href="#stg">战略部</a>
+			<a id = "mcnTab" class="tablink w3-padding mynavfont" href="#mcn">机械组</a>
+			<a id = "prgmTab" class="tablink w3-padding mynavfont" href="#prgm">编程组</a>
+			<a id = "busnTab" class="tablink w3-padding mynavfont" href="#busn">商务组</a>
+		</nav> -->
+	<!-- topnav -->
+	<div class="w3-top">
+		<ul class="w3-navbar w3-black">
+			<li class = "w3-left"><img src = "logo/z_logo.jpg"></li>
+			<li><span class = "w3-hover-none w3-hover-text-none mynavfont t_md">Zodiac</span></li>
+			<li><a href="index.html" class = "mynavfont w3-text-grey  w3-hover-text-white">首页</a></li>
+            <li class = "w3-dropdown-hover">
+				<a href="#" class = "mynavfont w3-text-white  w3-hover-text-white">队伍</a>
+				<div class="w3-dropdown-content w3-white w3-card-4">
+					<a href="team.html#stg" class = "mynavfont">战略部</a>
+					<a href="team.html#mcn" class = "mynavfont">机械组</a>
+					<a href="team.html#prgm" class = "mynavfont">编程组</a>
+					<a href="team.html#busn" class = "mynavfont">商务组</a>
+				</div>
+			</li>
+			<li class = "w3-dropdown-hover">
+				<a href="us.html" class = "mynavfont w3-text-grey  w3-hover-text-white">我们</a>
+				<div class="w3-dropdown-content w3-white w3-card-4">
+					<a href="us.html?tag=school" class = "mynavfont">学校</a>
+					<a href="us.html?tag=member" class = "mynavfont">人员</a>
+					<a href="us.html?tag=teacher" class = "mynavfont">导师</a>
+				</div>
+			</li>
+			<li class = "w3-dropdown-hover">
+				<a href="#" class = "mynavfont w3-text-grey  w3-hover-text-white">比赛</a>
+                <div class="w3-dropdown-content w3-white w3-card-4">
+					<a href="http://www.firstinspires.org/robotics/frc" target="_blank" class = "mynavfont">关于FRC</a>
+                    <a href="FRC_2017.html" class = "mynavfont">FRC2017</a>
+				</div>
+			</li>
+			<li><a href="Support.html" class = "mynavfont w3-text-grey  w3-hover-text-white">支持</a></li>
+			<li class = "w3-right"><a href="#" class = "mynavfont">English</a></li>
+		</ul>
+	</div>
+    <section class="panel stg" data-section-name="stg">
+		<div class="w3-row w3-white w3-padding-64">
+			<div class="w3-col w3-container m2">
+			</div>
+			<div class="w3-col w3-container m4">
+				<br>
+				<span class="w3-wide t_lg">CAD组</span>
+				<p class="w3-opacity t_sm"><i>名单 </i></p>
+				<p class="w3-opacity t_sm"><i>名单 </i></p>
+				<p class="w3-opacity t_sm"><i>名单 </i></p>
+				<p class="w3-opacity t_sm"><i>名单 </i></p>
+				<p class="w3-opacity t_sm"><i>名单 </i></p>
+				<p class="w3-opacity t_sm"><i>名单 </i></p>
+				<p class="w3-opacity t_sm"><i>名单 </i></p>
+				<p class="w3-opacity t_sm"><i>名单 </i></p>
+				<p class="w3-opacity t_sm"><i> </i></p>
+			</div>
+			<div class="w3-col w3-container m3">
+				<img src="image/section-3.png" style="width:80%">
+			</div>
+			<div class="w3-col w3-container m3">
+			</div>
+		</div>
+	</section>
+    <section class="panel mcn" data-section-name="mcn" data-section-menu="mcn">
+		<div class="w3-row w3-light-grey w3-padding-64">
+			<div class="w3-col w3-container m3">
+			</div>
+			<div class="w3-col w3-container m3">
+				<img src="image/section-2.png" style="width:80%">
+			</div>
+			<div class="w3-col w3-container m4">
+				<br>
+				<span class="w3-wide t_lg">机电组</span>
+				<p class="w3-opacity t_sm"><i>名单</i></p>
+				<p class="w3-opacity t_sm"><i>名单 </i></p>
+				<p class="w3-opacity t_sm"><i>名单 </i></p>
+				<p class="w3-opacity t_sm"><i>名单 </i></p>
+				<p class="w3-opacity t_sm"><i>名单 </i></p>
+				<p class="w3-opacity t_sm"><i>名单 </i></p>
+				<p class="w3-opacity t_sm"><i>名单 </i></p>
+				<p class="w3-opacity t_sm"><i>名单 </i></p>
+				<p class="w3-opacity t_sm"><i> </i></p>
+			</div>
+			<div class="w3-col w3-container m2">
+			</div>
+		</div>
+	</section>
+    <section class="panel prgm" data-section-name="prgm" data-section-menu="prgm">
+		<div class="w3-row w3-white w3-padding-64">
+			<div class="w3-col w3-container m3">
+			</div>
+			<div class="w3-col w3-container m3">
+				<img src="image/section-2.png" style="width:80%">
+			</div>
+			<div class="w3-col w3-container m4">
+				<br>
+				<span class="w3-wide t_lg">狂拽酷帅叼炸天的编程组</span>
+				<p class="w3-opacity t_sm"><i>名单</i></p>
+				<p class="w3-opacity t_sm"><i>名单 </i></p>
+				<p class="w3-opacity t_sm"><i>名单 </i></p>
+				<p class="w3-opacity t_sm"><i>名单 </i></p>
+				<p class="w3-opacity t_sm"><i>名单 </i></p>
+				<p class="w3-opacity t_sm"><i>名单 </i></p>
+				<p class="w3-opacity t_sm"><i>名单 </i></p>
+				<p class="w3-opacity t_sm"><i> </i></p>
+			</div>
+			<div class="w3-col w3-container m2">
+			</div>
+		</div>
+	</section>
+    <section class="panel busn" data-section-name="busn" data-section-menu="busn">
+		<div class="w3-row w3-light-grey w3-padding-64">
+			<div class="w3-col w3-container m2">
+			</div>
+			<div class="w3-col w3-container m4">
+				<br>
+				<span class="w3-wide t_lg">商务与宣传组</span>
+				<p class="w3-opacity t_sm"><i>名单 </i></p>
+				<p class="w3-opacity t_sm"><i>名单 </i></p>
+				<p class="w3-opacity t_sm"><i>名单 </i></p>
+				<p class="w3-opacity t_sm"><i>名单 </i></p>
+				<p class="w3-opacity t_sm"><i>名单 </i></p>
+				<p class="w3-opacity t_sm"><i>名单 </i></p>
+				<p class="w3-opacity t_sm"><i>名单 </i></p>
+				<p class="w3-opacity t_sm"><i>名单 </i></p>
+				<p class="w3-opacity t_sm"><i> </i></p>
+			</div>
+			<div class="w3-col w3-container m3">
+				<img src="image/section-3.png" style="width:80%">
+			</div>
+			<div class="w3-col w3-container m3">
+			</div>
+		</div>
+	</section>
+    <section class="panel contact" data-section-name="contact" data-section-menu="contact">
+		<div class="w3-black">
+			<div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+				<h2 class="w3-wide w3-center">联系 · 我们</h2>
+				<div class="w3-row">
+					<div class="w3-col w3-container m4">
+					</div>
+					<div class="w3-col w3-container m8">
+						<br>
+						<p class="w3-opacity"><i>Email：hsefz@hsefz.cn</i></p><br>
+						<p class="w3-opacity"><i>Tel：4008-123-123</i></p><br>
+						<p class="w3-opacity"><i>Address：晨晖路555号 / 祖冲之路736号</i></p><br>
+						<p class="w3-opacity"><i>Tel time available：每周一至周五9a.m.~5p.m.</i></p><br>
+						<p class="w3-opacity"><i>这里</i></p><br>
+						<p class="w3-opacity"><i>似乎</i></p><br>
+						<p class="w3-opacity"><i>还差几行</i></p><br>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<div class="section-menu">
+	<ul>
+		<li><a href="#stg" ><span>Description</span></a></li>
+		<li><a href="#mcn"><span>Section 1</span></a></li>
+		<li><a href="#prgm"><span>Section 2</span></a></li>
+		<li><a href="#busn"><span>Section 3</span></a></li>
+	</ul>
+</div>	
+
+</body>
+</html>
